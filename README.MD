@@ -28,24 +28,23 @@ Retailers face substantial revenue risk from misaligned inventory levels—overs
 ## Key Insights Summary
 * **Top Revenue Generators:** *Men's Street Footwear* ($208M+) and *Women's Apparel* ($180M+).
 * **Channel Performance:** *In-Store* and *Outlet* channels lead volume distribution, while *Online* distribution delivers higher operating margins (~45%).
-* **Regional Dominance:** The *West* and *Northeast* regions generate >55% of overall aggregate revenue.
+* **Regional Dominance:** The *West* and *Northeast* regions generate >50.7% of overall aggregate revenue.
 * **Peak Demand Cycles:** Consistently observed spikes during July–August (Back-to-School) and December (Holiday season).
 
 ## Forecasting Methodology & Model Evaluation
-The time series was aggregated to a **Weekly** frequency (`W-MON`). Lag structures ($1, 2, 4, 12$ weeks), rolling statistics ($4, 12$ weeks), and cyclical calendar features were engineered.
 
 ### Model Metrics (Holdout Validation Set)
 | Model Architecture | MAE ($) | RMSE ($) | MAPE (%) |
 | :--- | :--- | :--- | :--- |
-| **HistGradientBoostingRegressor** | **184,210** | **231,500** | **7.42%** |
-| **Holt-Winters Exponential Smoothing** | 245,110 | 298,400 | 9.85% |
+| **HistGradientBoostingRegressor** | **4523706.36** | **6565741.79** | **170.98%** |
+| **Holt-Winters Exponential Smoothing** | 5818440.71 | 7807560.89 | 201.46% |
 
-*The Gradient Boosting model outperformed baseline models with a **MAPE of ~7.42%** on hold-out validation data.*
+*The Gradient Boosting model outperformed baseline models with a **MAPE of ~170.98%** on hold-out validation data.*
 
 ## Installation & Setup Instructions
 ```bash
 # Clone Repository
-git clone [https://github.com/your-username/adidas-sales-demand-forecasting.git](https://github.com/your-username/adidas-sales-demand-forecasting.git)
+git clone https://github.com/muhammadhuzaifag/adidas-sales-demand-forecasting.git
 cd adidas-sales-demand-forecasting
 
 # Create Virtual Environment
@@ -54,3 +53,5 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install Required Dependencies
 pip install pandas numpy matplotlib seaborn plotly scikit-learn statsmodels openpyxl
+
+---
